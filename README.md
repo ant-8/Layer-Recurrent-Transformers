@@ -4,6 +4,10 @@
 This repo contains code for the paper:  **"Intra-Layer Recurrence in Transformers for Language Modeling"**  
 Accepted at CanadianAI 2025.
 
+## Abstract
+
+Transformer models have established new benchmarks in natural language processing; however, their increasing depth results in substantial growth in parameter counts. While existing recurrent transformer methods address this issue by reprocessing layers multiple times, they often apply recurrence indiscriminately across entire blocks of layers. In this work, we investigate Intra-Layer Recurrence (ILR), a more targeted approach that applies recurrence selectively to individual layers within a single forward pass. Our experiments show that allocating more iterations to earlier layers yields optimal results. These findings suggest that ILR offers a promising direction for optimizing recurrent structures in transformer architectures.
+
 ## Installation
 
 Install the required dependencies:
