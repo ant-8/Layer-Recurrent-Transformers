@@ -2,7 +2,7 @@
 
 # Intra-Layer Recurrence in Transformers for Language Modeling
 
-The code for the paper: [Improved GUI Grounding via Iterative Narrowing](https://arxiv.org/abs/2505.01855)
+The code for the paper: [Intra-Layer Recurrence in Transformers for Language Modeling](https://arxiv.org/abs/2505.01855)
 Accepted at CanadianAI 2025.
 
 ## Abstract
