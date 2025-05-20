@@ -1,0 +1,8 @@
+{
+  "model_type": "bpe",
+  "bos_token": "<bos>",
+  "eos_token": "<eos>",
+  "unk_token": "<unk>",
+  "pad_token": "<eos>",
+  "max_len": 256
+}

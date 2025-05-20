@@ -1,0 +1,76 @@
+{
+	"description": "",
+	"shared_args": {
+		"run_group_name": null,
+		"compute_budget": 0,
+		"val_split_percent": 0,
+		"tokenized_dataset_path": "/mnt/nvme2/tokenized_datasets/train_fineweb_edu_dedup_10b_llama2_tok_1024_ctx_500M",
+		"tokenized_validation_dataset_path": "/mnt/nvme2/tokenized_datasets/val_fineweb_edu_dedup_10b_llama2_tok_8192_ctx_50M",
+		"test_ctx_lens": [
+			512,
+			1024,
+			2048,
+			4096
+		],
+		"hf_dataset": null,
+		"hf_subset": null,
+		"tokenizer": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+		"hf_dataset_validation_split": null,
+		"num_workers": 0,
+		"seed": 42,
+		"sequential_looping": false,
+		"attention_implementation": "eager",
+		"force_cast_bf16": false,
+		"ctx_len": 1024,
+		"n_embd": 768,
+		"batch_size": 8,
+		"total_dataset_tokens": 201000000,
+		"gradient_accumulation_steps": 8,
+		"n_layer": 8,
+		"n_head": 8,
+		"vocab_size": 32000,
+		"deterministic": true,
+		"save_model": false,
+		"lr_ratio": 0.02,
+		"loop_map": null,
+		"positional_encoding": "rope",
+		"num_loops": null,
+		"num_epochs": 1,
+		"lr": 0.001,
+		"logging_step_interval": 1,
+		"architecture": "llama",
+		"auto_adjust_log_interval": true,
+		"resume_index": 0
+	},
+	"runs": [
+		{
+			"run_name": "baseline 6x500M",
+			"num_epochs": 6,
+			"loop_map": [
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1
+			],
+			"use_baseline_model": false
+		},
+		{
+			"run_name": "1,2,1,1,1,1,1,1 6x500M",
+			"num_epochs": 6,
+			"loop_map": [
+				1,
+				2,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1
+			]
+		}
+	]
+}

@@ -1,0 +1,5 @@
+transformers==4.47.1
+ptflops
+tqdm
+datasets
+wandb
