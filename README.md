@@ -9,6 +9,8 @@ Accepted at CanadianAI 2025.
 
 Transformer models have established new benchmarks in natural language processing; however, their increasing depth results in substantial growth in parameter counts. While existing recurrent transformer methods address this issue by reprocessing layers multiple times, they often apply recurrence indiscriminately across entire blocks of layers. In this work, we investigate Intra-Layer Recurrence (ILR), a more targeted approach that applies recurrence selectively to individual layers within a single forward pass. Our experiments show that allocating more iterations to earlier layers yields optimal results. These findings suggest that ILR offers a promising direction for optimizing recurrent structures in transformer architectures.
 
+![Figure 1](https://raw.githubusercontent.com/ant-8/Layer-Recurrent-Transformers/refs/heads/main/figure1.JPG)
+
 ## Dataset Setup
 TODO
 
