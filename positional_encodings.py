@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 
+# From https://github.com/huggingface/transformers/blob/main/src/transformers/models/mpt/modeling_mpt.py
 def build_alibi_slopes(num_heads, alibi_bias_max=8, device=None):
     num_heads_power_of_2 = 2 ** math.ceil(math.log2(num_heads))
 
@@ -15,6 +16,8 @@ def build_alibi_slopes(num_heads, alibi_bias_max=8, device=None):
 
     return slopes.view(num_heads)
 
+# From the CoPE paper: https://arxiv.org/pdf/2405.18719
+# Experiments for testing CoPE and FIRE with ILR were incomplete due to time and resource constraints
 class CoPE(nn.Module):
     def __init__(self, npos_max, head_dim):
         super().__init__()
@@ -37,6 +40,7 @@ class CoPE(nn.Module):
         w = pos - pos_floor
         return logits_ceil * w + logits_floor * (1 - w)
 
+# From the FIRE paper: https://arxiv.org/abs/2310.04418
 class FIRE(nn.Module):
     def __init__(self, num_heads=12, mlp_width=32, init_c=0.1, init_L=512., eps=1e-6):
         """
