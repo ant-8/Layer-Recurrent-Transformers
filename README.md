@@ -94,4 +94,14 @@ model = LoopedLlamaForCausalLM(config)
 
 ## 📄 Citation
 
-(citation coming soon after official proceedings publication).
+```
+@article{Nguyen2025Intra,
+	author = {Nguyen, Anthony and Lin, Wenjun},
+	journal = {Proceedings of the Canadian Conference on Artificial Intelligence},
+	year = {2025},
+	month = {may 19},
+	note = {https://caiac.pubpub.org/pub/reqqqozg},
+	publisher = {Canadian Artificial Intelligence Association (CAIAC)},
+	title = {Intra-{Layer} {Recurrence} in {Transformers} for {Language} {Modeling}},
+}
+```
