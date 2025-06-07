@@ -1,9 +1,9 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2505.01855-b31b1b.svg)](https://arxiv.org/abs/2505.01855)
 
-# Intra-Layer Recurrence in Transformers for Language Modeling
+The code for the paper: [Intra-Layer Recurrence in Transformers for Language Modeling](https://caiac.pubpub.org/pub/reqqqozg/release/1)
 
-The code for the paper: [Intra-Layer Recurrence in Transformers for Language Modeling](https://arxiv.org/abs/2505.01855)
-Accepted at CanadianAI 2025.
+# Intra-Layer Recurrence in Transformers for Language Modeling
+**Anthony Nguyen, Wenjun Lin**
 
 ## Abstract
 
