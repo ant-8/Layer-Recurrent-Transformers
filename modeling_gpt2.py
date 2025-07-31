@@ -1,3 +1,7 @@
+# version of the GPT-2 model with ILR
+# Experiments with this architecture were not included in the paper in favor of more modern LLaMA
+# Included for potential educational purposes or future work
+
 from transformers.models.gpt2.modeling_gpt2 import GPT2Model, GPT2PreTrainedModel, GPT2Block, GPT2Attention, GPT2MLP
 from transformers.modeling_outputs import BaseModelOutputWithPastAndCrossAttentions
 

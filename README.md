@@ -86,11 +86,9 @@ model = LoopedLlamaForCausalLM(config)
 
 ## Notes
 
-- We conducted preliminary experiments on **GPT-2-based architectures** and alternative positional encodings (**CoPE**, **FIRE**), but these were incomplete due to time and resource constraints and were not included in the paper.
+- We conducted preliminary experiments on GPT-2-based architectures (implementation in `modeling_gpt2.py`) and further alternative positional encodings (CoPE, FIRE), but these were incomplete due to time and resource constraints and were not included in the paper.
 
-- Due to architectural changes, the default `generate()` method from HF Transformers is not supported and has been overwritten with a naive implementation:
-  - No KV-caching
-  - Sampling only supports temperature-based decoding
+- Due to architectural changes, the default `generate()` method from HF Transformers is not supported and has been overwritten with a naive implementation without KV-caching and only a temperature option for non-greedy sampling.
 
 ## 📄 Citation
 
