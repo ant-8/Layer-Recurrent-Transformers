@@ -252,10 +252,8 @@ from transformers import LogitsProcessorList, StoppingCriteriaList
 
 class LoopedGPT2ForCausalLM(GPT2LMHeadModel):
     def __init__(self, config):
-        super().__init__(config)
+        super().__init__(config) # already gives us lm_head with tied weights
         self.transformer = LoopedGPT2Model(config)
-        #self.lm_head = nn.Linear(config.hidden_size, config.vocab_size, bias=False)
-        self.lm_head.weight = self.transformer.wte.weight
 
 
     @torch.no_grad()
